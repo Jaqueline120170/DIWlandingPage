@@ -265,8 +265,10 @@
        	/* Eventos */
 
 		.eventos {
-		    padding: 50px 20px;
+		    padding: 50px 0;
 		    background-color: #1e1e1e;
+		    width: 100vw; 
+    		margin-left: calc(-50vw + 50%); 
 		}
 		
 		.container-fluid {
@@ -283,7 +285,7 @@
 		.texto-eventos h2 {
 		    font-size: 3em;
             font-weight: bold;
-            margin: 0;
+            margin: 40px;
             color:white;
 		}
 		
@@ -297,11 +299,13 @@
 		.texto-eventos p {
 		    font-size: 1.2em;
             margin-top: 10px;
+            margin: 40px;
             color:white;
 		}
 		
 		.carousel {
 		    width: 50%;
+		    margin:20px;
 		}
 		
 		.carousel img {
@@ -313,7 +317,95 @@
 		    background-color: black;
 		    border-radius: 50%;
 		}
-		       
+		
+		/* MOTOCLUBES */
+		
+		.motoClubes {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+        }
+        
+        .cabezalClubes {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+        .cabezalClubes::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #c00;
+            margin-top: 5px;
+        }
+        .contenidoClubes{
+        	margin-top:20px;
+        	justify-content:center;
+        	padding:20px;
+        }
+        
+        /* Formulario */
+        
+        .containedorFormulario {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container {
+            padding: 40px;
+            flex: 1;
+        }
+        .form-container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .form-container h1::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #b71c1c;
+            margin-top: 5px;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-container textarea {
+            height: 100px;
+            resize: none;
+        }
+        .form-container button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #b71c1c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+       
+        
         /* Footer */
         
         footer {
@@ -343,7 +435,7 @@
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Eventos</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Rutas</a></li>
         </ul>
         <div class="auth-buttons">
             <a class="login" href="#">Iniciar sesion</a>
@@ -369,7 +461,6 @@
       Riding Club
      </span>
    </div>
-   
     <p>
      Bienvenido VIAL Motor Riding Club, un club exclusivo para motociclistas de la marca yamaha, en el que se transmiten los sentimientos de satisfacción y profunda emoción intensa al vivir algo de valor excepcional, esta es la filosofía de
      <span style="font-style: italic;">
@@ -393,6 +484,7 @@
             <img src="imagenes/logo moto.jpg" alt="Yamaha YRC Riding Club">
             <div class="beneficios">Obtén beneficios al ser parte de VIAL Motor Riding Club </div>
         </div>
+    </div>
     </div>
 	<!-- BENEFICIOS -->
 	<div class="beneficios1">
@@ -464,7 +556,13 @@
        ¡Sé parte de la familia Yamaha!
       </p>
      </div>
-    
+     <div class="benefit">
+      <i class="fas fa-users-cog">
+      </i>
+      <p>
+       ¡Sé parte de la familia Yamaha!
+      </p>
+     </div>
   </div>
  </div>
  	<!-- Eventos -->
@@ -506,18 +604,41 @@
             </div>
         </div>
     </section>
- 	
+    <!-- MOTOCLUBES -->
+	<div class="motoclubes">
+  <div class="contenedorClubes">
+   <div class="cabezalClubes">
+    Familia VIAL Motor
+   </div>
+   <div class="contenidoClubes">
+   <img alt="Motoclubes" height="850" src="imagenes/motoClub.jpg" width="1000"/>
+ </div>
+ </div>
+ </div>
+ <!-- FORMULARIO -->
+ <div class="contenedorFormulario">
+        <div class="form-container">
+            <h1>Contacto</h1>
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </div>
+    </div>
     <!-- Footer -->
     <footer>
         <img alt="Yamaha Riding Club Logo" height="50" src="imagenes/logo moto.jpg" width="150"/>
         <p><small><b>© VIAL Motor Sevilla</b> 2024</small></p>
         <p><a href="#">Aviso de privacidad</a></p>
         <p>
-            <a href="#">VIAL Motor global</a> |
-            <a href="#">VIAL Motor Financiero</a> |
+            <a href="#">VIAL Motor Global</a> |
+            <a href="#">VIAL Motor Eventos</a> |
             <a href="#">VIAL Motor Music</a> |
             <a href="#">VIAL Motor Galeria</a> |
-            <a href="#">VIAL Motor Racing</a>
+            <a href="#">VIAL Motor Prensa</a>
         </p>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
